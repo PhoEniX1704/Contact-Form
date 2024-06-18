@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Mentor | Contact form</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="./scripts.js"></script>
+    <style>
+        .required-star {
+            color: #20a120;
+        }
+    </style>
+</head>
+
+<body class="bg-green-100 flex items-center justify-center h-screen">
+    <div class="bg-white p-6 rounded-lg shadow-md w-full max-w-md">
+        <h1 class="text-2xl font-semibold mb-6">Contact Us</h1>
+        <form id="contactForm">
+            <div class="mb-2 grid grid-cols-1 gap-4 sm:grid-cols-2">
+                <div>
+                    <label for="firstName" class="block text-sm font-medium text-gray-500">First Name <span
+                            class="required-star">*</span></label>
+                    <input type="text" id="firstName" name="firstName"
+                        class="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-green-600 hover:border-green-600"
+                        required>
+                </div>
+                <div>
+                    <label for="lastName" class="block text-sm font-medium text-gray-500">Last Name <span
+                            class="required-star">*</span></label>
+                    <input type="text" id="lastName" name="lastName"
+                        class="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-green-600 hover:border-green-600"
+                        required>
+                </div>
+            </div>
+            <div class="mb-2">
+                <label for="email" class="block text-sm font-medium text-gray-500">Email Address <span
+                        class="required-star">*</span></label>
+                <input type="email" id="email" name="email" class="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-green-600 hover:border-green-600" required>
+            </div>
+            <div class="mb-2">
+                <span class="block text-sm font-medium text-gray-500">Query Type <span class="required-star">*</span></span>
+                <div class="mt-1 flex space-x-4">
+                    <label class="inline-flex items-center mt-1 p-2 w-full border border-gray-300 rounded-md shadow-sm focus:ring-green-600 hover:border-green-600 hover:bg-green-100">
+                    <input type="radio" name="queryType" value="General Enquiry" class="form-radio text-green-600"
+                            required><span class="ml-2 text-gray-600">General Enquiry</span>
+                    </label>
+                    <label class="inline-flex items-center mt-1 p-2 w-full border border-gray-300 rounded-md shadow-sm focus:ring-green-600 hover:border-green-600 hover:bg-green-100">
+                    <input type="radio" name="queryType" value="Support Request" class="form-radio text-green-600"
+                            required><span class="ml-2 text-gray-600">Support Request</span>
+                    </label>
+                </div>
+            </div>
+            <div class="mb-2">
+                <label for="message" class="block text-sm font-medium text-gray-500">Message <span
+                        class="required-star">*</span></label>
+                <textarea id="message" name="message"
+                    class="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-green-600 hover:border-green-600"
+                    rows="4" required></textarea>
+            </div>
+            <div class="mb-2 flex items-start">
+                <div class="flex items-center h-5">
+                    <input id="consent" name="consent" type="checkbox" class="accent-green-500 form-checkbox text-green-600" required>
+                    <label for="consent" class="ml-2 text-sm font-medium text-gray-500">I consent to being contacted by the team <span class="required-star">*</span></label>
+                </div>
+            </div>
+            <div>
+                <button type="submit"
+                    class="w-full bg-green-600 text-white p-2 rounded-md hover:bg-green-800 focus:ring-4 focus:ring-green-600 focus:ring-opacity-50">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
